@@ -13,13 +13,15 @@ This app was created in Python (jupyter notebook), with Pycharm to build a virtu
 In order to use the app locally: 
 1) install python, pip
 2) run pip install -r requirements.txt
-3) change in app.py the last line: from "app.run(debug=False,host='0.0.0.0', port=8080)" to "app.run(debug=True)"
-4) run app.py 
+3) USCensus1990.data.txt file should be added to the same folder or add path
+4) change in app.py the last line: from "app.run(debug=False,host='0.0.0.0', port=8080)" to "app.run(debug=True)"
+5) run app.py 
 
 #To use the app on the Google Cloud run:
 1) create your own project on Google Cloud console
-2) change project ID
-3) run the following with your own project ID
+2) install Google cloud SDK
+3) change project ID, the service name in the following 
+4) run the following with your own project ID
 gcloud builds submit --tag gcr.io/uscensus1990/dash-us-census --project=uscensus1990
 
 gcloud run deploy --image gcr.io/uscensus1990/dash-us-census --platform managed  --project=uscensus1990 --allow-unauthenticated
